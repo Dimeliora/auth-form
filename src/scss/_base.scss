@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    height: 100vh;
     margin: 0;
     font-family: 'Quicksand', sans-serif;
     font-size: 2.8rem;
@@ -31,4 +32,15 @@ button {
     &:focus-within {
         outline: none;
     }
+}
+
+.auth {
+    min-height: 100%;
+    padding: 45px 0 20px;
+    background: #fafafa url('/images/bg.webp') no-repeat left center;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 80px;
 }

@@ -1,0 +1,19 @@
+.header {
+    &__logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.2rem;
+    }
+
+    &__logo-image {
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+        object-fit: cover;
+    }
+}
