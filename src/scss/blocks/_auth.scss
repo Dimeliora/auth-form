@@ -1,0 +1,44 @@
+.auth {
+    height: 100vh;
+    background: #fafafa url('/images/bg.webp') no-repeat -20% center;
+    color: #ffffff;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__heading {
+        margin-bottom: 20px;
+        font-size: 2.8rem;
+        text-transform: uppercase;
+    }
+
+    &__subheading {
+        line-height: 3rem;
+    }
+
+    &__forms {
+        width: 50%;
+        height: 100%;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__sign-in {
+        width: 365px;
+        margin: auto;
+    }
+
+    &__footer {
+        color: $black;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        font-weight: 500;
+    }
+}

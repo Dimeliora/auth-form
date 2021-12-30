@@ -1,0 +1,60 @@
+.auth-form {
+    color: $black;
+    text-transform: uppercase;
+    text-align: center;
+
+    &__heading {
+        margin-bottom: 5px;
+        font-size: 2.9rem;
+    }
+
+    &__subheading {
+        margin-bottom: 30px;
+        font-size: 1.9rem;
+        font-weight: 700;
+    }
+
+    &__field {
+        & + .auth-form__field {
+            margin-top: 10px;
+        }
+    }
+
+    &__submit {
+        width: 100%;
+        margin-top: 20px;
+        padding: 13px 24px;
+        border: none;
+        border-radius: 25px;
+        background: linear-gradient(245deg, #3ab6da 0%, #0f9cd5 100%);
+        color: #ffffff;
+        font-size: 1.6rem;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background: linear-gradient(
+                245deg,
+                lighten(#3ab6da, 10%) 0%,
+                lighten(#0f9cd5, 10%) 100%
+            );
+        }
+    }
+
+    &__switch-form {
+        margin-top: 25px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        color: $black;
+        font-size: 1.6rem;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: color 0.2s ease-in;
+
+        &:hover,
+        &:focus {
+            color: $gray;
+        }
+    }
+}

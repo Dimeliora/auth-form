@@ -31,19 +31,85 @@
         <meta name="theme-color" content="#ffffff" />
     </head>
     <body>
-        <div class="auth">
-            <header class="header">
-                <div class="container">
-                    <a href="/" class="header__logo">
-                        <img
-                            src="/images/logo.webp"
-                            alt="Logo"
-                            class="header__logo-image"
-                        />
-                        <span>Single sign-on<br />(SSO)</span>
-                    </a>
+        <header class="header">
+            <div class="container">
+                <a href="/" class="header__logo">
+                    <img
+                        src="/images/logo.webp"
+                        alt="Logo"
+                        class="header__logo-image"
+                    />
+                    <span>Single sign-on<br />(SSO)</span>
+                </a>
+            </div>
+        </header>
+        <main>
+            <section class="auth">
+                <div class="auth__wrapper container">
+                    <div class="auth__greeting">
+                        <h1 class="auth__heading">Welcome back!</h1>
+                        <div class="auth__subheading">
+                            Enter your ID and<br />Password to continue
+                        </div>
+                    </div>
+                    <div class="auth__forms">
+                        <form class="auth__sign-in auth-form">
+                            <h2 class="auth-form__heading">Sign in</h2>
+                            <div class="auth-form__subheading">
+                                to access the portal
+                            </div>
+                            <div class="auth-form__field text-field">
+                                <svg class="text-field__icon">
+                                    <use href="/icons/icon-sprite.svg#person" />
+                                </svg>
+                                <label
+                                    class="text-field__label"
+                                    for="sign-in-email"
+                                    >Email</label
+                                >
+                                <input
+                                    class="text-field__input"
+                                    type="text"
+                                    name="sign-in-email"
+                                    id="sign-in-email"
+                                    placeholder="Enter Email"
+                                />
+                            </div>
+                            <div class="auth-form__field text-field">
+                                <svg class="text-field__icon">
+                                    <use href="/icons/icon-sprite.svg#key" />
+                                </svg>
+                                <label
+                                    class="text-field__label"
+                                    for="sign-in-password"
+                                    >Password</label
+                                >
+                                <input
+                                    class="text-field__input"
+                                    type="password"
+                                    name="sign-in-password"
+                                    id="sign-in-password"
+                                    placeholder="Enter Password"
+                                />
+                            </div>
+                            <button class="auth-form__submit" type="submit">
+                                Login
+                            </button>
+                            <button
+                                class="auth-form__switch-form"
+                                type="button"
+                            >
+                                Sign up
+                            </button>
+                        </form>
+
+                        <div class="auth__footer">
+                            Copyright &copy; 2022 Commlink Info Tech Ltd. All
+                            rights reserved.
+                        </div>
+                    </div>
                 </div>
-            </header>
-        </div>
+            </section>
+        </main>
     </body>
 </html>
