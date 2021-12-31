@@ -153,7 +153,7 @@ const makeFavicons = (done) =>
     realFavicon.generateFavicon(
         {
             masterPicture: `${SRC_PATH}/favicon/favicon.png`,
-            dest: `${SRC_PATH}/favicon`,
+            dest: `${DEST_PATH}/icons`,
             iconsPath: "/icons",
             design: JSON.parse(fs.readFileSync(FAVICON_DESIGN_PATH)),
             settings: {
@@ -177,10 +177,6 @@ const injectFavicons = () =>
             )
         )
         .pipe(dest(SRC_PATH, { overwrite: true }));
-
-// ======== Favicons Copy Handler ========
-const copyFavicons = () =>
-    src(`${SRC_PATH}/favicon/*.*`).pipe(dest(`${DEST_PATH}/icons`));
 
 // ======== Favicons Data remove ========
 const clearFaviconData = () => del(FAVICON_DATA_PATH);
@@ -212,7 +208,7 @@ const watchers = () => {
 const build = series(
     clearDist,
     series(makeFavicons, injectFavicons, clearFaviconData),
-    parallel(html, scss, js, images, webpConvert, svg, fonts, copyFavicons)
+    parallel(html, scss, js, images, webpConvert, svg, fonts)
 );
 
 // ======== Build & Serve Task ========
