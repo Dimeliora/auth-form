@@ -21,18 +21,27 @@
     }
 
     &__forms {
+        position: relative;
         width: 50%;
         height: 100%;
         padding: 20px 0;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
     }
 
-    &__sign-in {
+    &__form-item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 365px;
-        margin: auto;
+        transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+
+        &--hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 
     &__footer {

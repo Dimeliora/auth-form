@@ -176,6 +176,15 @@ const injectFavicons = () =>
                 JSON.parse(fs.readFileSync(FAVICON_DATA_PATH)).favicon.html_code
             )
         )
+        .pipe(
+            gulpIf(
+                IS_PROD,
+                htmlMin({
+                    collapseWhitespace: true,
+                    removeComments: true,
+                })
+            )
+        )
         .pipe(dest(DEST_PATH, { overwrite: true }));
 
 // ======== Favicons Data remove ========

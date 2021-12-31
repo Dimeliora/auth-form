@@ -3,6 +3,9 @@
     text-transform: uppercase;
     text-align: center;
 
+    &--hidden {
+    }
+
     &__heading {
         margin-bottom: 5px;
         font-size: 2.9rem;
