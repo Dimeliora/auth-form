@@ -2,6 +2,8 @@ import { formsElms } from './dom-elements';
 
 let isFormTransitionStarted = false;
 
+formsElms.signUpFormElm.classList.add('auth__form-item--hidden');
+
 formsElms.signInSwitchElm.addEventListener('click', () => {
     formsElms.signUpFormElm.classList.add('auth__form-item--hidden');
     isFormTransitionStarted = true;
