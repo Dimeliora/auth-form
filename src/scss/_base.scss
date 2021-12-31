@@ -34,7 +34,25 @@ button {
 }
 
 .container {
-    max-width: 1880px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    min-height: 850px;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 45px 80px 20px;
+    background: #fafafa url('/images/bg.webp') no-repeat -20% center;
+
+    @media screen and (max-width: $xxl) {
+        background-position: -70% center;
+    }
+
+    @media screen and (max-width: $xl) {
+        background: linear-gradient(245deg, #3ab6da 0%, #0f9cd5 100%);
+    }
+
+    @media screen and (max-width: $md) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
