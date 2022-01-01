@@ -8,10 +8,17 @@ export const alertElms = {
     alertBlockElm: document.querySelector('[data-alert-block]'),
 };
 
+// Header DOM Elements
+export const headerElms = {
+    authUserElm: document.querySelector('[data-auth-user]'),
+};
+
 // Main DOM Elements
 export const mainElms = {
     containerElm: document.querySelector('[data-container-block]'),
-}
+    authBlockElm: document.querySelector('[data-auth-block]'),
+    usersBlockElm: document.querySelector('[data-users-block]'),
+};
 
 // Sign In Form
 export const signInElms = {

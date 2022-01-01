@@ -38,122 +38,149 @@
                     />
                     <span>Single sign-on<br />(SSO)</span>
                 </a>
+                <div class="header__user" data-auth-user>
+                    <div class="header__username">Username</div>
+                    <button class="header__logout">Logout</button>
+                </div>
             </header>
-            <main class="auth">
-                <div class="auth__greeting">
-                    <h1 class="auth__heading">Welcome back!</h1>
-                    <div class="auth__subheading">
-                        Enter your Email and Password to continue
+            <main class="main">
+                <section class="auth" data-auth-block>
+                    <div class="auth__greeting">
+                        <h1 class="auth__heading">Welcome back!</h1>
+                        <div class="auth__subheading">
+                            Enter your Email and Password to continue
+                        </div>
                     </div>
-                </div>
-                <div class="auth__forms">
-                    <form class="auth__form-item auth-form" data-sign-in-form>
-                        <h2 class="auth-form__heading">Sign in</h2>
-                        <div class="auth-form__subheading">
-                            to access the portal
-                        </div>
-                        <div class="auth-form__field text-field">
-                            <svg class="text-field__icon">
-                                <use href="/icons/icon-sprite.svg#person" />
-                            </svg>
-                            <label class="text-field__label" for="sign-in-email"
-                                >Email</label
-                            >
-                            <input
-                                class="text-field__input"
-                                type="text"
-                                name="sign-in-email"
-                                id="sign-in-email"
-                                placeholder="Enter Email"
-                                data-sign-in-email
-                            />
-                        </div>
-                        <div class="auth-form__field text-field">
-                            <svg class="text-field__icon">
-                                <use href="/icons/icon-sprite.svg#key" />
-                            </svg>
-                            <label
-                                class="text-field__label"
-                                for="sign-in-password"
-                                >Password</label
-                            >
-                            <input
-                                class="text-field__input"
-                                type="password"
-                                name="sign-in-password"
-                                id="sign-in-password"
-                                placeholder="Enter Password"
-                                data-sign-in-password
-                            />
-                        </div>
-                        <button class="auth-form__submit" type="submit">
-                            Login
-                        </button>
-                        <button
-                            class="auth-form__switch-form"
-                            type="button"
-                            data-sign-up-switch
+                    <div class="auth__forms">
+                        <form
+                            class="auth__form-item auth-form"
+                            data-sign-in-form
                         >
-                            Sign up
-                        </button>
-                    </form>
-                    <form
-                        class="
-                            auth__form-item auth__form-item--hidden auth-form
-                        "
-                        novalidate
-                        data-sign-up-form
-                    >
-                        <h2 class="auth-form__heading">Sign up</h2>
-                        <div class="auth-form__subheading">
-                            to access the portal
-                        </div>
-                        <div class="auth-form__field text-field">
-                            <svg class="text-field__icon">
-                                <use href="/icons/icon-sprite.svg#person" />
-                            </svg>
-                            <label class="text-field__label" for="sign-up-email"
-                                >Email</label
+                            <h2 class="auth-form__heading">Sign in</h2>
+                            <div class="auth-form__subheading">
+                                to access the portal
+                            </div>
+                            <div class="auth-form__field text-field">
+                                <svg class="text-field__icon">
+                                    <use href="/icons/icon-sprite.svg#person" />
+                                </svg>
+                                <label
+                                    class="text-field__label"
+                                    for="sign-in-email"
+                                    >Email</label
+                                >
+                                <input
+                                    class="text-field__input"
+                                    type="text"
+                                    name="sign-in-email"
+                                    id="sign-in-email"
+                                    placeholder="Enter Email"
+                                    data-sign-in-email
+                                />
+                            </div>
+                            <div class="auth-form__field text-field">
+                                <svg class="text-field__icon">
+                                    <use href="/icons/icon-sprite.svg#key" />
+                                </svg>
+                                <label
+                                    class="text-field__label"
+                                    for="sign-in-password"
+                                    >Password</label
+                                >
+                                <input
+                                    class="text-field__input"
+                                    type="password"
+                                    name="sign-in-password"
+                                    id="sign-in-password"
+                                    placeholder="Enter Password"
+                                    data-sign-in-password
+                                />
+                            </div>
+                            <button class="auth-form__submit" type="submit">
+                                Login
+                            </button>
+                            <button
+                                class="auth-form__switch-form"
+                                type="button"
+                                data-sign-up-switch
                             >
-                            <input
-                                class="text-field__input"
-                                type="text"
-                                name="sign-up-email"
-                                id="sign-up-email"
-                                placeholder="Enter Email"
-                                data-sign-up-email
-                            />
-                        </div>
-                        <div class="auth-form__field text-field">
-                            <svg class="text-field__icon">
-                                <use href="/icons/icon-sprite.svg#key" />
-                            </svg>
-                            <label
-                                class="text-field__label"
-                                for="sign-up-password"
-                                >Password</label
-                            >
-                            <input
-                                class="text-field__input"
-                                type="password"
-                                name="sign-up-password"
-                                id="sign-up-password"
-                                placeholder="Enter Password"
-                                data-sign-up-password
-                            />
-                        </div>
-                        <button class="auth-form__submit" type="submit">
-                            Register
-                        </button>
-                        <button
-                            class="auth-form__switch-form"
-                            type="button"
-                            data-sign-in-switch
+                                Sign up
+                            </button>
+                        </form>
+                        <form
+                            class="
+                                auth__form-item
+                                auth__form-item--hidden
+                                auth-form
+                            "
+                            novalidate
+                            data-sign-up-form
                         >
-                            Sign in
-                        </button>
-                    </form>
-                </div>
+                            <h2 class="auth-form__heading">Sign up</h2>
+                            <div class="auth-form__subheading">
+                                to access the portal
+                            </div>
+                            <div class="auth-form__field text-field">
+                                <svg class="text-field__icon">
+                                    <use href="/icons/icon-sprite.svg#person" />
+                                </svg>
+                                <label
+                                    class="text-field__label"
+                                    for="sign-up-email"
+                                    >Email</label
+                                >
+                                <input
+                                    class="text-field__input"
+                                    type="text"
+                                    name="sign-up-email"
+                                    id="sign-up-email"
+                                    placeholder="Enter Email"
+                                    data-sign-up-email
+                                />
+                            </div>
+                            <div class="auth-form__field text-field">
+                                <svg class="text-field__icon">
+                                    <use href="/icons/icon-sprite.svg#key" />
+                                </svg>
+                                <label
+                                    class="text-field__label"
+                                    for="sign-up-password"
+                                    >Password</label
+                                >
+                                <input
+                                    class="text-field__input"
+                                    type="password"
+                                    name="sign-up-password"
+                                    id="sign-up-password"
+                                    placeholder="Enter Password"
+                                    data-sign-up-password
+                                />
+                            </div>
+                            <button class="auth-form__submit" type="submit">
+                                Register
+                            </button>
+                            <button
+                                class="auth-form__switch-form"
+                                type="button"
+                                data-sign-in-switch
+                            >
+                                Sign in
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="users" data-users-block>
+                    <div class="users__wrapper">
+                        <h2 class="users__heading">Registered Users List</h2>
+                        <ul class="users__list">
+                            <li class="users__list-item">User 1</li>
+                            <li class="users__list-item">User 2</li>
+                            <li class="users__list-item">User 3</li>
+                            <li class="users__list-item">User 4</li>
+                        </ul>
+                    </div>
+                </section>
             </main>
             <footer class="footer">
                 Copyright &copy; 2022 Commlink Info Tech Ltd. All rights

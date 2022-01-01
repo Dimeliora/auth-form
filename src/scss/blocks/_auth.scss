@@ -1,9 +1,13 @@
 .auth {
-    grid-column: 1 / 3;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-self: center;
+    height: 100%;
     color: #ffffff;
+
+    &--hidden {
+        display: none;
+    }
 
     @media screen and (max-width: $lg) {
         display: block;
