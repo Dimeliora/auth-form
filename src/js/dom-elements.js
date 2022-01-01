@@ -1,6 +1,8 @@
 // Sign In Form
 export const signInElms = {
     signInFormElm: document.querySelector('[data-sign-in-form]'),
+    signInEmailElm: document.querySelector('[data-sign-in-email]'),
+    signInPasswordElm: document.querySelector('[data-sign-in-password]'),
     signInSwitchElm: document.querySelector('[data-sign-in-switch]'),
 };
 
@@ -14,5 +16,5 @@ export const signUpElms = {
 
 // Alert DOM Elements
 export const alertElms = {
-    alertBlocknElm: document.querySelector("[data-alert-block]"),
+    alertBlocknElm: document.querySelector('[data-alert-block]'),
 };
