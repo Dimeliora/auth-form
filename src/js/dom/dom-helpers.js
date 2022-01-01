@@ -13,5 +13,5 @@ export const hidePreloader = () => {
 
 export const updateUsersList = (users) => {
     const usersListMarkup = createUsersListHTML(users);
-    mainElms.usersWrapperElm.insertAdjacentHTML('beforeend', usersListMarkup);
+    mainElms.usersWrapperElm.innerHTML = usersListMarkup;
 };
