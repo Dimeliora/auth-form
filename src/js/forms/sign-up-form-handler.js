@@ -27,6 +27,9 @@ signUpElms.signUpFormElm.addEventListener('submit', async (e) => {
         await addDoc(collection(db, 'users'), {
             email: userCreds.user.email,
         });
+
+        signUpElms.signUpEmailElm.value = '';
+        signUpElms.signUpPasswordElm.value = '';
     } catch (error) {
         hidePreloader();
 

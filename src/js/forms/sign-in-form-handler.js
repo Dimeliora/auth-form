@@ -16,6 +16,9 @@ signInElms.signInFormElm.addEventListener('submit', async (e) => {
         showPreloader();
 
         await signInWithEmailAndPassword(auth, email, password);
+
+        signInElms.signInEmailElm.value = '';
+        signInElms.signInPasswordElm.value = '';
     } catch (error) {
         hidePreloader();
 
