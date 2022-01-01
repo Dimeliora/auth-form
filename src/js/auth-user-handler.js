@@ -27,8 +27,8 @@ onAuthStateChanged(auth, async (user) => {
     } else {
         hidePreloader();
 
-        headerElms.authUserElm.classList.add('header__user--hidden');
-        mainElms.usersBlockElm.classList.add('users--hidden');
         mainElms.authBlockElm.classList.remove('auth--hidden');
+        mainElms.usersBlockElm.classList.add('users--hidden');
+        headerElms.authUserElm.classList.add('header__user--hidden');
     }
 });
