@@ -11,3 +11,8 @@ export const signUpElms = {
     signUpPasswordElm: document.querySelector('[data-sign-up-password]'),
     signUpSwitchElm: document.querySelector('[data-sign-up-switch]'),
 };
+
+// Alert DOM Elements
+export const alertElms = {
+    alertBlocknElm: document.querySelector("[data-alert-block]"),
+};
