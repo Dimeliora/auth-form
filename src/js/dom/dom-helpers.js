@@ -11,6 +11,11 @@ export const hidePreloader = () => {
     mainElms.containerElm.classList.remove('container--hidden');
 };
 
+export const toggleFormButtonsState = (form, disable = true) => {
+    const formButtons = form.querySelectorAll('button');
+    formButtons.forEach((btn) => (btn.disabled = disable));
+};
+
 export const updateUsersList = (users) => {
     const usersListMarkup = createUsersListHTML(users);
     mainElms.usersWrapperElm.innerHTML = usersListMarkup;

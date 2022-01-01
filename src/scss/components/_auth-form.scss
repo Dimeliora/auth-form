@@ -38,6 +38,7 @@
         color: #ffffff;
         font-size: 1.6rem;
         cursor: pointer;
+        transition: opacity 0.2s ease-out;
 
         &:hover,
         &:focus {
@@ -51,6 +52,10 @@
                 background: linear-gradient(245deg, #3ab6da 0%, #0f9cd5 100%);
             }
         }
+
+        &:disabled {
+            opacity: 0.5;
+        }
     }
 
     &__switch-form {
@@ -62,7 +67,7 @@
         font-size: 1.6rem;
         text-decoration: underline;
         cursor: pointer;
-        transition: color 0.2s ease-in;
+        transition: color 0.2s ease-in, opacity 0.2s ease-out;
 
         &:hover,
         &:focus {
@@ -71,6 +76,10 @@
             @media screen and (max-width: $md) {
                 color: #ffffff;
             }
+        }
+
+        &:disabled {
+            opacity: 0.5;
         }
 
         @media screen and (max-width: $xl) {

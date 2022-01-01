@@ -4,7 +4,7 @@ import { auth } from '../service/firebase-service';
 import { firebaseAuthErrors } from '../service/firebase-error-codes';
 import { signInElms } from '../dom/dom-elements';
 import { alertHandle } from '../alerts-handler';
-import { showPreloader, hidePreloader } from '../dom/dom-helpers';
+import { showPreloader, toggleFormButtonsState } from '../dom/dom-helpers';
 
 signInElms.signInFormElm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -13,14 +13,17 @@ signInElms.signInFormElm.addEventListener('submit', async (e) => {
     const password = signInElms.signInPasswordElm.value;
 
     try {
-        showPreloader();
+        toggleFormButtonsState(signInElms.signInFormElm);
 
         await signInWithEmailAndPassword(auth, email, password);
+
+        showPreloader();
+        toggleFormButtonsState(signInElms.signInFormElm, false);
 
         signInElms.signInEmailElm.value = '';
         signInElms.signInPasswordElm.value = '';
     } catch (error) {
-        hidePreloader();
+        toggleFormButtonsState(signInElms.signInFormElm, false);
 
         let errorMessage = 'Ошибка сервиса авторизации. Попробуйте позже';
         if (firebaseAuthErrors[error.code]) {
