@@ -77,6 +77,7 @@ const js = () =>
                 output: {
                     filename: 'script.js',
                 },
+                devtool: IS_PROD ? false : 'eval-source-map',
                 module: {
                     rules: [
                         {
