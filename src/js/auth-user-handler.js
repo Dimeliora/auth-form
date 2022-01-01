@@ -1,19 +1,30 @@
 import { onAuthStateChanged } from 'firebase/auth';
+import { collection, getDocs } from 'firebase/firestore';
 
-import { auth } from './firebase-service';
-import { headerElms, mainElms } from './dom-elements';
-import { showPreloader, hidePreloader } from './dom-helpers';
+import { auth, db } from './service/firebase-service';
+import { headerElms, mainElms } from './dom/dom-elements';
+import {
+    showPreloader,
+    hidePreloader,
+    updateUsersList,
+} from './dom/dom-helpers';
 
 showPreloader();
 
-onAuthStateChanged(auth, (user) => {
-    hidePreloader();
-
+onAuthStateChanged(auth, async (user) => {
     if (user) {
+        const querySnapshot = await getDocs(collection(db, 'users'));
+        const users = querySnapshot.docs.map((doc) => doc.data().email);
+        updateUsersList(users);
+
+        hidePreloader();
+
         mainElms.authBlockElm.classList.add('auth--hidden');
         mainElms.usersBlockElm.classList.remove('users--hidden');
         headerElms.authUserElm.classList.remove('header__user--hidden');
     } else {
+        hidePreloader();
+
         headerElms.authUserElm.classList.add('header__user--hidden');
         mainElms.usersBlockElm.classList.add('users--hidden');
     }

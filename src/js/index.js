@@ -1,5 +1,5 @@
-import './firebase-service';
+import './service/firebase-service';
 import './auth-user-handler';
-import './form-switch-handler';
-import './sign-up-form-handler';
-import './sign-in-form-handler';
+import './forms/form-switch-handler';
+import './forms/sign-up-form-handler';
+import './forms/sign-in-form-handler';

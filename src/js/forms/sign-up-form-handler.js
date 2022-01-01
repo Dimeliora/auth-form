@@ -1,11 +1,11 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { collection, addDoc } from 'firebase/firestore';
 
-import { auth, db } from './firebase-service';
-import { firebaseAuthErrors } from './configs/firebase-error-codes';
-import { signUpElms } from './dom-elements';
-import { alertHandle } from './alerts-handler';
-import { showPreloader, hidePreloader } from './dom-helpers';
+import { auth, db } from '../service/firebase-service';
+import { firebaseAuthErrors } from '../service/firebase-error-codes';
+import { signUpElms } from '../dom/dom-elements';
+import { alertHandle } from '../alerts-handler';
+import { showPreloader, hidePreloader } from '../dom/dom-helpers';
 
 signUpElms.signUpFormElm.addEventListener('submit', async (e) => {
     e.preventDefault();

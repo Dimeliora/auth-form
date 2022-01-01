@@ -1,10 +1,10 @@
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
-import { auth } from './firebase-service';
-import { firebaseAuthErrors } from './configs/firebase-error-codes';
-import { signInElms } from './dom-elements';
-import { alertHandle } from './alerts-handler';
-import { showPreloader, hidePreloader } from './dom-helpers';
+import { auth } from '../service/firebase-service';
+import { firebaseAuthErrors } from '../service/firebase-error-codes';
+import { signInElms } from '../dom/dom-elements';
+import { alertHandle } from '../alerts-handler';
+import { showPreloader, hidePreloader } from '../dom/dom-helpers';
 
 signInElms.signInFormElm.addEventListener('submit', async (e) => {
     e.preventDefault();

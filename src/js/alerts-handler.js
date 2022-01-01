@@ -1,6 +1,6 @@
 import { v4 } from 'uuid';
 
-import { alertElms } from './dom-elements';
+import { alertElms } from './dom/dom-elements';
 
 const alertTypeClassnames = {
     error: 'alert__item--error',

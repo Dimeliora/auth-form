@@ -6,7 +6,7 @@ import {
     browserLocalPersistence,
 } from 'firebase/auth';
 
-import { firebaseConfig } from './configs/firebase-config';
+import { firebaseConfig } from './firebase-config';
 
 initializeApp(firebaseConfig);
 
