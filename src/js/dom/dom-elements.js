@@ -11,6 +11,8 @@ export const alertElms = {
 // Header DOM Elements
 export const headerElms = {
     authUserElm: document.querySelector('[data-auth-user]'),
+    authUsernameElm: document.querySelector('[data-auth-username]'),
+    authLogoutElm: document.querySelector('[data-auth-logout]'),
 };
 
 // Main DOM Elements

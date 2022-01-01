@@ -39,8 +39,19 @@
                     <span>Single sign-on<br />(SSO)</span>
                 </a>
                 <div class="header__user" data-auth-user>
-                    <div class="header__username">Username</div>
-                    <button class="header__logout">Logout</button>
+                    <div class="header__username" data-auth-username>
+                        Username
+                    </div>
+                    <button
+                        class="header__logout icon-button"
+                        title="Logout"
+                        aria-label="Logout"
+                        data-auth-logout
+                    >
+                        <svg class="icon-button__icon">
+                            <use href="/icons/icon-sprite.svg#sign-out" />
+                        </svg>
+                    </button>
                 </div>
             </header>
             <main class="main">
