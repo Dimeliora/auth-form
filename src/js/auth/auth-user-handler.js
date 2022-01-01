@@ -1,13 +1,13 @@
 import { onAuthStateChanged } from 'firebase/auth';
 import { collection, getDocs } from 'firebase/firestore';
 
-import { auth, db } from './service/firebase-service';
-import { headerElms, mainElms } from './dom/dom-elements';
+import { auth, db } from '../service/firebase-service';
+import { headerElms, mainElms } from '../dom/dom-elements';
 import {
     showPreloader,
     hidePreloader,
     updateUsersList,
-} from './dom/dom-helpers';
+} from '../dom/dom-helpers';
 
 showPreloader();
 
