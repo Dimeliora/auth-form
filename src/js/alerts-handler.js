@@ -24,9 +24,9 @@ export const alertHandle = (message, type) => {
     const alertId = `alert-${v4()}`;
     const alertTemplate = createAlertHTML(alertId, message, type);
 
-    alertElms.alertBlocknElm.insertAdjacentHTML('beforeend', alertTemplate);
+    alertElms.alertBlockElm.insertAdjacentHTML('beforeend', alertTemplate);
 
-    const alertElm = alertElms.alertBlocknElm.querySelector(`#${alertId}`);
+    const alertElm = alertElms.alertBlockElm.querySelector(`#${alertId}`);
 
     const alertTimerId = setTimeout(() => {
         alertElm.style.opacity = 0;

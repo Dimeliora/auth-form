@@ -43,6 +43,10 @@ button {
     padding: 45px 80px 20px;
     background: #fafafa url('/images/bg.webp') no-repeat -20% center;
 
+    &--hidden {
+        display: none;
+    }
+
     @media screen and (max-width: $xxl) {
         background-position: -70% center;
     }

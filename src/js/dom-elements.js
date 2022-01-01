@@ -1,3 +1,18 @@
+// Preloader DOM Elements
+export const preloaderElms = {
+    preloaderBlockElm: document.querySelector('[data-preloader-block]'),
+};
+
+// Alert DOM Elements
+export const alertElms = {
+    alertBlockElm: document.querySelector('[data-alert-block]'),
+};
+
+// Main DOM Elements
+export const mainElms = {
+    containerElm: document.querySelector('[data-container-block]'),
+}
+
 // Sign In Form
 export const signInElms = {
     signInFormElm: document.querySelector('[data-sign-in-form]'),
@@ -12,9 +27,4 @@ export const signUpElms = {
     signUpEmailElm: document.querySelector('[data-sign-up-email]'),
     signUpPasswordElm: document.querySelector('[data-sign-up-password]'),
     signUpSwitchElm: document.querySelector('[data-sign-up-switch]'),
-};
-
-// Alert DOM Elements
-export const alertElms = {
-    alertBlocknElm: document.querySelector('[data-alert-block]'),
 };
