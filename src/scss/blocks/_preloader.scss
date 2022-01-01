@@ -4,6 +4,10 @@
     justify-content: center;
     height: 100vh;
 
+    @media screen and (max-width: $xl) {
+        background: linear-gradient(245deg, #3ab6da 0%, #0f9cd5 100%);
+    }
+
     &--hidden {
         display: none;
     }

@@ -4,6 +4,14 @@
     height: 100%;
     color: $dark;
 
+    @media screen and (max-width: $xl) {
+        color: #ffffff;
+    }
+
+    @media screen and (max-width: $lg) {
+        grid-template-columns: 1fr;
+    }
+
     &--hidden {
         display: none;
     }
@@ -12,6 +20,10 @@
         grid-column: 2 / 3;
         justify-self: center;
         margin-top: 50px;
+
+        @media screen and (max-width: $lg) {
+            grid-column: unset;
+        }
     }
 
     &__heading {

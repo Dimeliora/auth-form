@@ -17,6 +17,10 @@
             border-radius: 50%;
             background: $blue;
             margin: -4px 0 0 -4px;
+
+            @media screen and (max-width: $xl) {
+                background: #ffffff;
+            }
         }
 
         &:nth-child(1) {

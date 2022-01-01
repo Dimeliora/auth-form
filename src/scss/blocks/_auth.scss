@@ -11,6 +11,10 @@
 
     @media screen and (max-width: $lg) {
         display: block;
+
+        &--hidden {
+            display: none;
+        }
     }
 
     &__greeting {
