@@ -21,8 +21,8 @@ const browserSync = require('browser-sync').create();
 
 const SRC_PATH = './src';
 const DEST_PATH = './dist';
-const FAVICON_DESIGN_PATH = './favicon-design.json';
-const FAVICON_DATA_PATH = './favicon-data.json';
+const FAVICON_DESIGN_PATH = `${SRC_PATH}/favicon/favicon-design.json`;
+const FAVICON_DATA_PATH = `${SRC_PATH}/favicon/favicon-data.json`;
 const IS_PROD = process.env.NODE_ENV === 'production';
 const WEBPACK_MODE = IS_PROD ? 'production' : 'development';
 
