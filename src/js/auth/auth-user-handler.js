@@ -1,8 +1,13 @@
-import { onAuthStateChanged } from 'firebase/auth';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { collection, getDocs } from 'firebase/firestore';
 
 import { auth, db } from '../service/firebase-service';
-import { headerElms, mainElms } from '../dom/dom-elements';
+import {
+    headerElms,
+    mainElms,
+    signInElms,
+    signUpElms,
+} from '../dom/dom-elements';
 import {
     showPreloader,
     hidePreloader,
@@ -31,4 +36,11 @@ onAuthStateChanged(auth, async (user) => {
         mainElms.usersBlockElm.classList.add('users--hidden');
         headerElms.authUserElm.classList.add('header__user--hidden');
     }
+});
+
+headerElms.authLogoutElm.addEventListener('click', async () => {
+    await signOut(auth);
+
+    signInElms.signInFormElm.classList.remove('auth__form-item--hidden');
+    signUpElms.signUpFormElm.classList.add('auth__form-item--hidden');
 });
