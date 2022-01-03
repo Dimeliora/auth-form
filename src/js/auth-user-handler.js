@@ -1,18 +1,18 @@
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { collection, getDocs } from 'firebase/firestore';
 
-import { auth, db } from '../service/firebase-service';
+import { auth, db } from './service/firebase-service';
 import {
     headerElms,
     mainElms,
     signInElms,
     signUpElms,
-} from '../dom/dom-elements';
+} from './dom/dom-elements';
 import {
     showPreloader,
     hidePreloader,
     updateUsersList,
-} from '../dom/dom-helpers';
+} from './dom/dom-helpers';
 
 showPreloader();
 
